@@ -1,0 +1,2 @@
+# trojan
+coward ai
