@@ -121,9 +121,9 @@ Option Description
 
 ## Interactive Commands
 
-Command Action
-:quit or :q or :exit Exit Trojan
-:reset Clear conversation context
+## Command Action
+
+:quit or :q or :exit Exit Trojan. :reset Clear conversation context
 
 Example Session
 
