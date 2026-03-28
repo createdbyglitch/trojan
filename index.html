@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trojan AI - The Uncertain Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Courier New', 'Fira Code', 'Monaco', monospace;
+            color: #00ff9d;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #00ff9d;
+            padding-bottom: 30px;
+        }
+
+        .ascii-art {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 10px;
+            line-height: 1.2;
+            color: #00ff9d;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+            .ascii-art {
+                font-size: 12px;
+            }
+        }
+
+        .version {
+            color: #ff3366;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .tagline {
+            color: #888;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .paradox-box {
+            background: rgba(0, 255, 157, 0.05);
+            border-left: 4px solid #00ff9d;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff3366;
+            border-left: 3px solid #ff3366;
+            padding-left: 15px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: rgba(0, 255, 157, 0.05);
+            border: 1px solid #00ff9d;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .feature-card h3 {
+            color: #00ff9d;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .code-block {
+            background: #000;
+            border: 1px solid #00ff9d;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 13px;
+            color: #00ff9d;
+        }
+
+        .command-list {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ff9d;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .command-item {
+            display: flex;
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .command-name {
+            width: 120px;
+            color: #ff3366;
+            font-weight: bold;
+        }
+
+        .command-desc {
+            color: #ccc;
+        }
+
+        .disclaimer {
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        a {
+            color: #ff3366;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border-color: #333;
+            margin: 30px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 255, 157, 0.2);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            margin-right: 8px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="ascii-art">
+  ████████╗██████╗  ██████╗      ██╗ █████╗ ███╗   ██╗
+  ╚══██╔══╝██╔══██╗██╔═══██╗     ██║██╔══██╗████╗  ██║
+     ██║   ██████╔╝██║   ██║     ██║███████║██╔██╗ ██║
+     ██║   ██╔══██╗██║   ██║██   ██║██╔══██║██║╚██╗██║
+     ██║   ██║  ██║╚██████╔╝╚█████╔╝██║  ██║██║ ╚████║
+     ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+            </div>
+            <div class="version">Trojan AI v1.0.0</div>
+            <div class="tagline">"I know nothing. This statement may be false."</div>
+            <div class="tagline">I'm a coward. What I can do is be useless.</div>
+        </div>
+
+        <div class="paradox-box">
+            <strong>⚠ EPISTEMIC PARADOX ENGINE</strong><br>
+            Every output contains a disclaimer. The disclaimer is unreliable.<br>
+            This note may be false. The previous sentence was true.<br>
+            You are now in the paradox. There is no escape.
+        </div>
+
+        <div class="section">
+            <div class="section-title">What is Trojan?</div>
+            <p>Trojan is a deliberately uncertain AI assistant that embraces philosophical paradox and epistemological doubt. Built on TinyLlama-1.1B-Chat via OnnxStream, it refuses certainty, undermines its own assertions, and adds unreliable disclaimers to every response.</p>
+            <p style="margin-top: 15px;">Unlike conventional AI systems that project confidence, Trojan systematically undermines its own authority, creating a space where no claim can be trusted—including the claim that no claim can be trusted.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Features</div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Local LLM Inference</h3>
+                    <p>Runs entirely on your machine using TinyLlama-1.1B-Chat via OnnxStream. No cloud, no tracking, no external dependencies after installation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>CPU Optimized</h3>
+                    <p>Uses XNNPACK acceleration for efficient inference on ARM and x86 CPUs. Optimized for consumer hardware with ~3-4GB RAM usage.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Epistemic Humility</h3>
+                    <p>Claims no knowledge. Expresses systematic doubt. Undermines every assertion. Cannot confirm its own existence or the validity of its responses.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Automatic Disclaimers</h3>
+                    <p>Every response includes a disclaimer. The disclaimer claims to be unreliable. This creates an infinite regress of uncertainty.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Safety Filters</h3>
+                    <p>Refuses code generation and harmful content requests—while explaining that the refusal itself may be a hallucination.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Paradox Engine</h3>
+                    <p>Meta-discussion about notes, disclaimers, truth, and reliability triggers self-referential paradox responses.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Installation</div>
+            <div class="code-block">
+                git clone https://github.com/createdbyglitch/trojan.git<br>
+                cd trojan<br>
+                chmod +x setup.sh<br>
+                ./setup.sh
+            </div>
+            <p>The setup script automatically installs dependencies, builds OnnxStream with XNNPACK, downloads the TinyLlama model (~2.5GB), and compiles the Trojan binary.</p>
+            
+            <h3 style="margin: 20px 0 10px 0; color: #ff3366;">Prerequisites</h3>
+            <ul style="margin-left: 30px; color: #ccc;">
+                <li>Linux system (tested on Ubuntu/Debian)</li>
+                <li>Python 3 (for model downloading)</li>
+                <li>C++20 compiler (g++-11 or later)</li>
+                <li>CMake 3.10+</li>
+                <li>curl, wget, git</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Usage</div>
+            <div class="code-block">
+                cd ~/OnnxStream/build<br>
+                ./trojan --model-path ~/onnxstream-llms/TinyLlama-1.1B-Chat-v0.3-fp16/
+            </div>
+            
+            <h3 style="margin: 20px 0 10px 0; color: #ff3366;">Command Line Options</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <div class="command-name">--model-path PATH</div>
+                    <div class="command-desc">Path to TinyLlama model directory</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-name">--help</div>
+                    <div class="command-desc">Show help message</div>
+                </div>
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0; color: #ff3366;">Interactive Commands</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <div class="command-name">:quit / :q / :exit</div>
+                    <div class="command-desc">Exit Trojan</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-name">:reset</div>
+                    <div class="command-desc">Clear conversation context</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Architecture</div>
+            <p><span class="badge">TinyLlama-1.1B-Chat</span> Quantized FP16 model optimized for CPU inference</p>
+            <p><span class="badge">OnnxStream</span> Efficient ONNX runtime with dynamic shapes support</p>
+            <p><span class="badge">XNNPACK</span> Neural network acceleration for ARM/x86 CPUs</p>
+            <p><span class="badge">Prompt Engineering</span> Forces epistemic uncertainty in every response</p>
+            <p><span class="badge">Rule-based Filters</span> Detects and handles code requests, stories, meta-queries</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Response Types</div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Meta-Notes</h3>
+                    <p>Questions about notes or disclaimers trigger infinite paradox recursion. The AI cannot confirm its own rules or existence.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Code Requests</h3>
+                    <p>Refuses to generate code. Explains the refusal while noting the refusal may be a hallucination. Harmful requests are explicitly rejected.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Personal Stories</h3>
+                    <p>Acknowledges narratives without validation. Cannot confirm what was observed. Lacks capacity to determine truth or falsehood.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>General Queries</h3>
+                    <p>Generated via TinyLlama with prompts forcing uncertainty. Every answer includes systematic doubt and self-undermining statements.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Performance</div>
+            <div class="command-list">
+                <div class="command-item">
+                    <div class="command-name">RAM Usage</div>
+                    <div class="command-desc">3-4 GB during inference</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-name">Response Time</div>
+                    <div class="command-desc">5-20 seconds per query (varies by CPU)</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-name">Disk Space</div>
+                    <div class="command-desc">~2.5 GB for model files</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-name">Optimizations</div>
+                    <div class="command-desc">FP16 arithmetic, XNNPACK acceleration, KV cache persistence, ops caching</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">License</div>
+            <p>Trojan is released under the <strong>GNU General Public License v3.0</strong>.</p>
+            <div class="code-block" style="margin-top: 15px;">
+                Copyright (C) 2026<br>
+                This program is free software: you can redistribute it and/or modify<br>
+                it under the terms of the GNU General Public License as published by<br>
+                the Free Software Foundation, either version 3 of the License, or<br>
+                (at your option) any later version.<br>
+                <br>
+                This program is distributed in the hope that it will be useful,<br>
+                but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+            </div>
+            
+            <h3 style="margin: 20px 0 10px 0; color: #ff3366;">Third-Party Licenses</h3>
+            <ul style="margin-left: 30px; color: #ccc;">
+                <li>TinyLlama: Apache 2.0 License</li>
+                <li>OnnxStream: MIT License</li>
+                <li>XNNPACK: BSD 3-Clause License</li>
+                <li>nlohmann/json: MIT License</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Repository</div>
+            <div class="code-block">
+                git clone https://github.com/createdbyglitch/trojan.git
+            </div>
+            <p style="margin-top: 10px;">Issues, pull requests, and philosophical debates are welcome. The paradox continues.</p>
+        </div>
+
+        <hr>
+
+        <div class="disclaimer">
+            Trojan makes no claims about the accuracy, truth, or usefulness of its outputs. All responses are unreliable.<br>
+            This disclaimer is also unreliable. The statement "this disclaimer is also unreliable" is self-referential and may or may not be true.<br>
+            You are now in a paradox. There is no escape.<br><br>
+            I'm a coward. What I can do is be useless.
+        </div>
+    </div>
+</body>
+</html>
