@@ -116,8 +116,9 @@ cd ~/OnnxStream/build
 # Command-line Options
 
 Option Description
---model-path PATH Path to TinyLlama model directory
---help Show help message
+
+--model-path PATH - Path to TinyLlama model directory
+--help - Show help message
 
 ## Interactive Commands
 
