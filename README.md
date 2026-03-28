@@ -1,6 +1,6 @@
 # Trojan AI
 
-"I know nothing. This statement may be false."
+*"I know nothing. This statement may be false."*
 
 Trojan is a deliberately uncertain AI assistant that embraces philosophical paradox and epistemological doubt. Built on TinyLlama via OnnxStream, it refuses certainty, undermines its own assertions, and adds unreliable disclaimers to every response.
 
@@ -46,6 +46,7 @@ git clone https://github.com/createdbyglitch/trojan.git
 cd trojan
 chmod +x setup.sh
 ./setup.sh
+```
 
 The setup script will:
 
@@ -54,7 +55,6 @@ The setup script will:
 3. Download the TinyLlama model (~2.5GB)
 4. Compile the Trojan binary
 5. Run Trojan automatically
-```
 
 # Manual Installation
 
